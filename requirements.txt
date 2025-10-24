@@ -1,0 +1,7 @@
+python-dotenv>=1.0.1
+requests>=2.32.3
+python-telegram-bot>=21.6
+transformers>=4.44.0
+torch>=2.4.0; platform_system!="Darwin" or platform_machine!="arm64"
+torch>=2.4.0; platform_system=="Darwin" and platform_machine=="arm64" # при необходимости поставь с сайта
+accelerate>=0.34.2
