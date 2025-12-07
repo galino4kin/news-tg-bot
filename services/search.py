@@ -55,7 +55,8 @@ class NewsAPIClient:
                         'description': article.get('description', ''),
                         'url': article.get('url', ''),
                         'published_at': article.get('publishedAt', ''),
-                        'source': article.get('source', {}).get('name', '')
+                        'source': article.get('source', {}).get('name', ''),
+                        'content': article.get('content', ''),
                     })
                 
                 logger.info(f"Found {len(news_list)} news articles for topic '{topic}'")

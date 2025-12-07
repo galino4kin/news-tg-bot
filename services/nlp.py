@@ -19,7 +19,7 @@ class NLPService:
         
     def summarize_text(self, text: str, max_tokens: int = 256) -> str:
         """Summarize the given text using OpenAI API"""
-        prompt = f"""Imagine you are a journalist conducting research on the topic of {topic}. You have been given {n} articles to review. Produce a clear, informative summary that captures the key points without unnecessary detail:
+        prompt = f"""Imagine you are a journalist conducting research on the topic of {topic}. You have been given {n} articles to review. Produce a clear, informative summary that captures the key points of articles content without unnecessary details:
 
                     {text}
 
