@@ -37,7 +37,7 @@ class GNewsClient:
             params = {
                 "q": topic,
                 "max": min(max_results, 10),
-                "lang": "en",
+                "lang": "ru", #en/ru
                 "sortby": "publishedAt",
                 "apikey": self.api_key,
             }
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     logger.info("Testing GNews API...")
     client = GNewsClient()
     if client.api_key:
-        python_news = client.get_news("python programming", max_results=3)
+        python_news = client.get_news("программирование", max_results=3)
         client.save_news(python_news, "python_news_gnews.json")
         for article in python_news:
             logger.info(f"News: {article['title']}")

@@ -37,7 +37,7 @@ class NewsAPIClient:
                 'q': topic,
                 'pageSize': min(max_results, 10),
                 'apiKey': self.api_key,
-                'language': 'en',
+                'language': 'ru', # en/ru
                 'sortBy': 'publishedAt'
             }
             
@@ -85,7 +85,7 @@ if __name__ == "__main__":
     logger.info("Testing News API...")
     news = NewsAPIClient()
     if news.api_key:
-        python_news = news.get_news("python programming", max_results=3)
+        python_news = news.get_news("программирование", max_results=3)
         news.save_news(python_news, "python_news.json")
         for article in python_news:
             logger.info(f"News: {article['title']}")
