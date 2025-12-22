@@ -86,12 +86,3 @@ class GNewsClient:
 if __name__ == "__main__":
     logger.info("Testing GNews API...")
     client = GNewsClient()
-    if client.api_key:
-        python_news = client.get_news("программирование", max_results=3)
-        client.save_news(python_news, "python_news_gnews.json")
-        for article in python_news:
-            logger.info(f"News: {article['title']}")
-            logger.info(f"Content snippet: {article.get('content', '')[:200]}...")
-    else:
-        logger.warning("GNEWS_API_KEY not configured")
-        pass
