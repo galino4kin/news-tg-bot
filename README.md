@@ -1,7 +1,7 @@
 # Telegram News NLP Bot
 
 Small Telegram bot that fetches top news for a topic and applies NLP: summarization and sentiment. Built for fast prototyping.
-Made in collaboration with @AlisaUrikh.
+Made in collaboration with [@AlisaUrikh](https://github.com/AlisaUrikh).
 
 **Content**
 
@@ -171,3 +171,5 @@ Notes:
 - If you send a topic without choosing an option first, the bot will ask you to select an action from the menu.
 - If the topic is too short, the bot will ask you to retry.
 - If no news is found for the query, the bot will return `Новости не найдены.` or `Недостаточно данных`.
+
+<img width="735" height="490" alt="image" src="https://github.com/user-attachments/assets/d3fda35b-b1d9-47e8-81fb-626ba4ca03de" />
