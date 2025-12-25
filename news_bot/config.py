@@ -6,8 +6,8 @@ load_dotenv()
 
 # Загрузка переменных окружения
 BOT_TOKEN = os.getenv("TELEGRAM_TOKEN")
-NEWS_API_KEY = os.getenv("NEWS_API_KEY")
-GOOGLE_CSE_ID = os.getenv("GOOGLE_CSE_ID")
+GNEWS_API_KEY = os.getenv("GNEWS_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 if not BOT_TOKEN:
     raise RuntimeError("TELEGRAM_TOKEN не задан")
