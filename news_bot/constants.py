@@ -1,0 +1,3 @@
+# Константы
+SEARCH_TOP_K = 5
+SUMMARY_MAX_TOKENS = 256
