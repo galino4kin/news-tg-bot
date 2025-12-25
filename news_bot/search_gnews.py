@@ -1,11 +1,14 @@
-import requests
-from logger_config import logger
-import os
-from typing import List, Dict
-from dotenv import load_dotenv
 import json
+import os
+from typing import Dict, List
+
+import requests
+from dotenv import load_dotenv
+
+from .logger_config import logger
 
 load_dotenv()
+
 
 class GNewsClient:
     """
@@ -30,7 +33,7 @@ class GNewsClient:
             params = {
                 "q": topic,
                 "max": min(max_results, 10),
-                "lang": "ru", #en/ru
+                "lang": "ru",  # en/ru
                 "sortby": "publishedAt",
                 "apikey": self.api_key,
             }

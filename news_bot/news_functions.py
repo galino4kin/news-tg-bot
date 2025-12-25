@@ -1,5 +1,6 @@
-from logger_config import logger
-from aiogram import types 
+from aiogram import types
+
+from .logger_config import logger
 
 async def show_top_news(message: types.Message, current_topic: str, gnews_client):
     await message.answer(f"🔍 Ищу новости по теме: «{current_topic}»")

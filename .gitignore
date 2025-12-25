@@ -1,4 +1,19 @@
-.venv/
+# Python cache/artifacts
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Env/config secrets
 .env
+.env.*.local
+*.env
+
+# Local data/cache
+latest_news.json
+
+# Editor/OS
+.DS_Store
+.idea/
+.vscode/

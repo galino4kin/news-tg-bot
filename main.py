@@ -2,12 +2,12 @@ import asyncio
 from aiogram import types, F
 from aiogram.filters import Command
 
-from config import bot, dp
-from states import current_topic, pending_action
-from services import gnews_client, nlp_service
-from keyboards import keyboard_main
-from handlers import start_command, help_command
-from news_functions import show_top_news, show_summary_sentiment
+from news_bot.config import bot, dp
+from news_bot.states import current_topic, pending_action
+from news_bot.services import gnews_client, nlp_service
+from news_bot.keyboards import keyboard_main
+from news_bot.handlers import start_command, help_command
+from news_bot.news_functions import show_top_news, show_summary_sentiment
 
 @dp.message(Command('start'))
 async def start_handler(message: types.Message):
