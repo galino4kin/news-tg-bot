@@ -46,23 +46,36 @@ flowchart TD
 ## Project layout
 
 ```
-news-tg-bot/
-├── .env
-├── .gitignore
-├── requirements.txt
-├── config.py
-├── text_loader.py
-├── services/
-│   ├── search.py
-│   ├── nlp.py
-│   └── telegram_bot.py
-├── main.py
-└── tests/
-    ├── result.json
-    └── test_flow.py
+NEWS-TG-BOT/
+├── news_bot/                  # Main application package
+│   ├── config.py              # Loads environment variables and app configuration
+│   ├── constants.py           # Global constants and static values
+│   ├── handlers.py            # Telegram handlers (commands, callbacks, message routing)
+│   ├── keyboards.py           # Inline and reply keyboards for the bot
+│   ├── logger_config.py       # Logging configuration
+│   ├── main.py                # Entry point of the application
+│   ├── news_functions.py      # High-level logic for fetching and processing news
+│   ├── nlp.py                 # Summarization and sentiment logic via OpenAI
+│   ├── search_gnews.py        # Integration with GNews API
+│   ├── services.py            # External services wrappers (APIs, clients)
+│   └── states.py              # FSM states (if using aiogram / stateful dialogs)
+│
+├── venv/                      # Local virtual environment (not committed)
+│   ├── bin/
+│   ├── lib/
+│   ├── share/
+│   └── pyvenv.cfg
+│
+├── .env                       # Environment variables (tokens, API keys) (not committed)
+├── .gitignore                 # Git ignore rules
+├── latest_news.json           # Cache of the latest fetched news
+├── README.md                  # Project documentation
+└── requirements.txt           # Python dependencies
 ```
 
 ## Requirements
+
+*Script only runs with VPN turned on due to the OpenAI restrictions.*
 
 * Python 3.10+
 * GNews API token
@@ -95,8 +108,8 @@ pip install -r requirements.txt
 
 ```env
 TELEGRAM_TOKEN=your_telegram_bot_token
-GOOGLE_API_KEY=your_google_api_key
-GOOGLE_CSE_ID=your_custom_search_engine_id
+GNEWS_APIKEY=your_gnews_api_key
+OPENAI_APIKEY=your_openai_apikey
 ```
 
 5. Run:
