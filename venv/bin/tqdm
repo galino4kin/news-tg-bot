@@ -1,4 +1,4 @@
-#!/Users/alisa/Downloads/news-tg-bot/venv/bin/python3.11
+#!/Users/alisa/Downloads/news-tg-bot/venv/bin/python3.12
 import sys
 from tqdm.cli import main
 if __name__ == '__main__':
