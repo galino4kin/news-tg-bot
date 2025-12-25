@@ -46,7 +46,7 @@ flowchart TD
 ## Project layout
 
 ```
-project/
+news-tg-bot/
 ├── .env
 ├── .gitignore
 ├── requirements.txt
@@ -75,7 +75,7 @@ project/
 
 ```bash
 git clone <this-repo-url>
-cd project
+cd news-tg-bot
 ```
 
 2. Create and activate venv:
@@ -102,6 +102,7 @@ GOOGLE_CSE_ID=your_custom_search_engine_id
 5. Run:
 
 ```bash
+cd news_bot
 python main.py
 ```
 
@@ -172,5 +173,6 @@ Notes:
 - If you send a topic without choosing an option first, the bot will ask you to select an action from the menu.
 - If the topic is too short, the bot will ask you to retry.
 - If no news is found for the query, the bot will return `Новости не найдены.` or `Недостаточно данных`.
+
 
 <img width="735" height="490" alt="image" src="https://github.com/user-attachments/assets/d3fda35b-b1d9-47e8-81fb-626ba4ca03de" />
